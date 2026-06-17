@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飲料架庫存</title>
+</head>
+<body>
+
+    <h1>飲料架庫存狀態</h1>
+
+    <table border="1">
+
+        <tr>
+            <th>飲料名稱</th>
+            <th>目前數量</th>
+        </tr>
+
+        {% for name, info in data.items() %}
+
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ info.current }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
